@@ -1,0 +1,40 @@
+apply plugin : 'war'
+apply plugin : 'eclipse'
+
+springVersion = "3.1.1.RELEASE"
+sourceCompatibility = 1.6
+slf4jVersion = "1.6.1"
+sourceSets.main.resources.srcDir '/Users/karl/projects/logtool/logtool/src/main/webapp/WEB-INF/'
+group = 'com.noname.logtool'
+
+version = '1.0'
+repositories {
+  	mavenCentral()
+}
+
+repositories {
+	mavenRepo urls:"http://maven.springframework.org/milestone" 
+}
+
+dependencies{
+	compile "org.slf4j:jcl-over-slf4j:$slf4jVersion",
+			"org.slf4j:jul-to-slf4j:$slf4jVersion"
+
+	compile "org.springframework:spring-webmvc:$springVersion"
+	compile "javax.servlet:servlet-api:2.5"
+	compile "javax.faces:jsf-api:1.2_02"
+	compile "javax.faces:jsf-impl:1.2-b19"
+	compile "javax.servlet:jstl:1.1.2",
+       		"taglibs:standard:1.1.2"  
+
+   	compile "org.codehaus.jackson:jackson-core-asl:1.8.0"
+   	compile "org.codehaus.jackson:jackson-core-lgpl:1.8.0"
+   	compile "org.codehaus.jackson:jackson-mapper-asl:1.8.0"
+   	compile "org.codehaus.jackson:jackson-mapper-lgpl:1.8.0"
+ 
+   
+	runtime "org.slf4j:slf4j-log4j12:$slf4jVersion"
+	testCompile "junit:junit:4.8.2"
+
+	testCompile "org.springframework:spring-test:$springVersion"
+}
