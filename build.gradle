@@ -4,7 +4,8 @@ apply plugin : 'eclipse'
 springVersion = "3.1.1.RELEASE"
 sourceCompatibility = 1.6
 slf4jVersion = "1.6.1"
-sourceSets.main.resources.srcDir '/Users/karl/projects/logtool/logtool/src/main/webapp/WEB-INF/'
+sourceSets.main.resources.srcDir 'src/main/webapp/WEB-INF/'
+
 group = 'com.noname.logtool'
 
 version = '1.0'
