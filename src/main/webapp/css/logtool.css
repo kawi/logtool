@@ -1,0 +1,43 @@
+/* .ui-autocomplete-loading { */
+/* 	background: white url('../images/ui-anim_basic_16x16.gif') right */
+/* 		center no-repeat; */
+/* } */
+
+#packagefinder {
+	width: 460px;
+}
+
+.container {
+	margin: 0 auto;
+}
+
+.container>div {
+	margin-top: 30px;
+}
+
+body {
+	margin: 0;
+	text-align: center;
+}
+
+#log {
+	height: 200px;
+	width: 1024px;
+	margin: 0 auto;
+	text-align: left;
+}
+
+
+  .packagelabel, .radio, .radioGroup {
+	float: left; 
+}
+.packagelabel {
+ 	width: 640px;
+
+}
+.packagelabel, .radioGroup {
+ 	border-bottom: dashed 1px #444;
+}
+label {
+ margin-left: 10px;
+}
