@@ -1,7 +1,6 @@
-/* .ui-autocomplete-loading { */
-/* 	background: white url('../images/ui-anim_basic_16x16.gif') right */
-/* 		center no-repeat; */
-/* } */
+body {
+    font-family: oswald, helvetica, arial;     
+}
 
 #packagefinder {
 	width: 460px;
@@ -20,6 +19,10 @@ body {
 	text-align: center;
 }
 
+#log div {
+    height: 20px;
+
+    }
 #log {
 	height: 200px;
 	width: 1024px;
@@ -27,8 +30,7 @@ body {
 	text-align: left;
 }
 
-
-  .packagelabel, .radio, .radioGroup {
+.packagelabel, .radio, .radioGroup {
 	float: left; 
 }
 .packagelabel {

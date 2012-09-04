@@ -1,9 +1,11 @@
 package com.noname.logtool.controller;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Enumeration;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
@@ -21,6 +23,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.noname.logtool.service.LogtoolService;
+import com.sun.org.apache.commons.collections.ListUtils;
+import com.sun.org.apache.commons.collections.SetUtils;
 
 @Controller
 public class AjaxController {
@@ -28,18 +32,21 @@ public class AjaxController {
 	@Autowired
 	private LogtoolService logtoolService;
 	
-    @RequestMapping(value = "/package", method = RequestMethod.GET)
+    @RequestMapping(value = "/checkPackage", method = RequestMethod.GET)
     public @ResponseBody
-    Set<String> getPackage(@RequestParam String input) {
+    String getPackage(@RequestParam String input) {
         Map<String, Logger> loggers = logtoolService.getLoggersMap();
-        Set<String> packs = new HashSet<String>();
+        List<String> packs = new ArrayList<String>();
 
         for (String logger : loggers.keySet()) {
             if (logger.startsWith(input)) {
                 packs.add(logger);
             }
         }
-        return packs;
+        if (packs.size() == 1) {
+            return packs.get(0);
+        }
+        return "";
     }
 
    

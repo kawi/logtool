@@ -29,6 +29,4 @@ public class DefaultController {
     	model.addAttribute("packages", loggers);
         return "/loglevel";
     }
-    
-    
 }
