@@ -37,9 +37,52 @@
 			</datalist>
 		</div>
 
-		<div>		
-			<div id="log"></div>
-		</div>
+		<div>
+            <div id="log">
+                <div
+                    id="org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver">
+                    <div class="gradient"></div>
+                    <div class="packagelabel">org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver</div>
+                    <div class="radioGroup">
+                        <div class="radio">
+                            <label
+                                for="error.org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver">error</label>
+                            <input type="radio" value="error"
+                                id="error.org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver"
+                                name="org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver">
+                        </div>
+                        <div class="radio">
+                            <label
+                                for="warn.org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver">warn</label><input
+                                type="radio" value="warn"
+                                id="warn.org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver"
+                                name="org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver">
+                        </div>
+                        <div class="radio">
+                            <label
+                                for="info.org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver">info</label><input
+                                type="radio" value="info"
+                                id="info.org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver"
+                                name="org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver">
+                        </div>
+                        <div class="radio">
+                            <label
+                                for="debug.org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver">debug</label><input
+                                type="radio" value="debug"
+                                id="debug.org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver"
+                                name="org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver">
+                        </div>
+                        <div class="radio">
+                            <label
+                                for="trace.org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver">trace</label><input
+                                type="radio" value="trace"
+                                id="trace.org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver"
+                                name="org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
 	</div>
 
