@@ -65,14 +65,5 @@ $(function() {
         datalist.addEventListener("click", function() {
             alert("talking!");
         }, false);
-    
-        $("button").click(function() {
-            $.ajax({
-                url : "./doLog",
-                data : {
-                    level : this.value
-                }
-            });
-        });
     });
 });

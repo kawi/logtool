@@ -20,13 +20,6 @@
 <body>
 	<div class="container">
 		<div>
-			<button id="error" value="error"><span class="logbutton">log.error</span></button>
-			<button id="warn"  value="warn"><span class="logbutton">log.warn </span></button>
-			<button id="info"  value="info"><span class="logbutton">log.info </span></button>
-			<button id="debug" value="debug"><span class="logbutton">log.debug</span></button>
-			<button id="trace" value="trace"><span class="logbutton">log.trace</span></button>
-		</div>
-		<div>
 			<input list="packages" id="packagefinder" placeholder="Enter package" type="text" />
 
 			<datalist id="packages">
