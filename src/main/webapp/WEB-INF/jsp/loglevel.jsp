@@ -5,7 +5,7 @@
 
 <html>
 <c:url var="logtoolCss" value="/static/css/logtool.css" />
-<c:url var="mainJs" value="/static/js/main.js" />
+<c:url var="logtoolJs" value="/static/js/logtool.js" />
 <c:url var="jquery" value="/static/js/jquery-1.7.2.min.js" />
 
 <head>
@@ -19,7 +19,6 @@
 </head>
 <body>
 	<div class="container">
-	
 		<div>
 			<button id="error" value="error"><span class="logbutton">log.error</span></button>
 			<button id="warn"  value="warn"><span class="logbutton">log.warn </span></button>
@@ -29,66 +28,20 @@
 		</div>
 		<div>
 			<input list="packages" id="packagefinder" placeholder="Enter package" type="text" />
-			  
+
 			<datalist id="packages">
 				<c:forEach var="package" items="${packages}">
 					    <option value="${package.key}" /> 
 				</c:forEach>
 			</datalist>
 		</div>
-
 		<div>
-            <div id="log">
-                <div
-                    id="org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver">
-                    <div class="gradient"></div>
-                    <div class="packagelabel">org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver</div>
-                    <div class="radioGroup">
-                        <div class="radio">
-                            <label
-                                for="error.org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver">error</label>
-                            <input type="radio" value="error"
-                                id="error.org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver"
-                                name="org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver">
-                        </div>
-                        <div class="radio">
-                            <label
-                                for="warn.org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver">warn</label><input
-                                type="radio" value="warn"
-                                id="warn.org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver"
-                                name="org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver">
-                        </div>
-                        <div class="radio">
-                            <label
-                                for="info.org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver">info</label><input
-                                type="radio" value="info"
-                                id="info.org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver"
-                                name="org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver">
-                        </div>
-                        <div class="radio">
-                            <label
-                                for="debug.org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver">debug</label><input
-                                type="radio" value="debug"
-                                id="debug.org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver"
-                                name="org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver">
-                        </div>
-                        <div class="radio">
-                            <label
-                                for="trace.org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver">trace</label><input
-                                type="radio" value="trace"
-                                id="trace.org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver"
-                                name="org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver">
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <div id="log"></div>
         </div>
-
 	</div>
 
 	<script src="${jquery}"></script>
-    <script src="${mainJs}"></script>
-	
+    <script src="${logtoolJs}"></script>
 </body>
 </html>
 	

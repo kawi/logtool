@@ -33,7 +33,8 @@ $(function() {
         group.prependTo("#log");
         var row = $("<div id=\"" +pack + "\" />");
         
-        $('<div class="packagelabel" />').text(pack).appendTo(row);
+        $("<div class=\"gradient\" />").appendTo(row);
+        $("<div class=\"packagelabel\" />").text(pack).appendTo(row);
         group.appendTo(row);
         row.prependTo("#log");
         $("#log").scrollTop(0);
@@ -53,7 +54,6 @@ $(function() {
             }
         });
     }
-    
     $(document).ready(function() {
         $("#packagefinder").on("keyup", function(e) {
             if (e.which === 13) {
@@ -75,5 +75,4 @@ $(function() {
             });
         });
     });
-
 });

@@ -2,36 +2,29 @@ package com.noname.logtool.controller;
 
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Enumeration;
-import java.util.HashMap;
-import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
-import java.util.Set;
 
 import javax.servlet.http.HttpServletResponse;
 
 import org.apache.log4j.Level;
-import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.util.CollectionUtils;
+import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.noname.logtool.service.LogtoolService;
-import com.sun.org.apache.commons.collections.ListUtils;
-import com.sun.org.apache.commons.collections.SetUtils;
 
 @Controller
-public class AjaxController {
+public class LogToolController {
 
-	@Autowired
-	private LogtoolService logtoolService;
-	
+    @Autowired
+    private LogtoolService logtoolService;
+
     @RequestMapping(value = "/checkPackage", method = RequestMethod.GET)
     public @ResponseBody
     String getPackage(@RequestParam String input) {
@@ -49,8 +42,6 @@ public class AjaxController {
         return "";
     }
 
-   
-
     @RequestMapping(value = "/setLogLevel", method = RequestMethod.GET)
     public @ResponseBody
     String setLogLevel(@RequestParam String pack, @RequestParam String level, HttpServletResponse response)
@@ -64,5 +55,12 @@ public class AjaxController {
             return "not ok";
         }
         return "ok";
+    }
+
+    @RequestMapping(value = "/loglevel", method = RequestMethod.GET)
+    public String loglevelMapping(ModelMap model) {
+        Map<String, Logger> loggers = logtoolService.getLoggersMap();
+        model.addAttribute("packages", loggers);
+        return "/loglevel";
     }
 }
